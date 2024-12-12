@@ -28,6 +28,8 @@ Copy the precompiled binaries to your Docker image. Here’s an example Dockerfi
 
 FROM --platform=linux/amd64 python:3.12-slim
 
+ENV ACCEPT_EULA=Y
+
 RUN wget https://github.com/matteofrige/openssl-1.1.1l/raw/refs/heads/main/openssl-1.1.1l.deb \
     dpkg -i openssl-1.1.1l.deb \
     rm openssl-1.1.1l.deb
